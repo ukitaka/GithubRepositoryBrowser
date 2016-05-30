@@ -27,3 +27,6 @@ Carthage
 
 # Pods
 Pods/
+
+# Token
+GithubTokenConfig.swift
