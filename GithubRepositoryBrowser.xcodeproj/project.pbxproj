@@ -308,8 +308,10 @@ fi
 			<key>files</key>
 			<array>
 				<string>B828D47C1CFC096100AF51AC</string>
+				<string>B828D4821CFC0D1700AF51AC</string>
 				<string>B828D46F1CFBF95200AF51AC</string>
 				<string>B828D4741CFC048100AF51AC</string>
+				<string>B828D4841CFC0D2C00AF51AC</string>
 				<string>B828D47E1CFC0A6B00AF51AC</string>
 				<string>B828D4711CFBFE7F00AF51AC</string>
 			</array>
@@ -402,6 +404,7 @@ fi
 			<array>
 				<string>B828D4721CFC045B00AF51AC</string>
 				<string>B828D46D1CFBF8BA00AF51AC</string>
+				<string>B828D47F1CFC0C1900AF51AC</string>
 				<string>B828D4511CFBEED900AF51AC</string>
 				<string>B828D4531CFBEED900AF51AC</string>
 			</array>
@@ -955,8 +958,6 @@ fi
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Repository</string>
 			<key>path</key>
 			<string>Repository</string>
 			<key>sourceTree</key>
@@ -999,6 +1000,77 @@ fi
 		<dict>
 			<key>fileRef</key>
 			<string>B828D47D1CFC0A6B00AF51AC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B828D47F1CFC0C1900AF51AC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B828D4801CFC0CFB00AF51AC</string>
+				<string>B828D4831CFC0D2C00AF51AC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>UseCase</string>
+			<key>path</key>
+			<string>UseCase</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B828D4801CFC0CFB00AF51AC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B828D4811CFC0D1700AF51AC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>RepositoryList</string>
+			<key>path</key>
+			<string>RepositoryList</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B828D4811CFC0D1700AF51AC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>RepositoryListUseCase.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B828D4821CFC0D1700AF51AC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B828D4811CFC0D1700AF51AC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B828D4831CFC0D2C00AF51AC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>UseCase.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B828D4841CFC0D2C00AF51AC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B828D4831CFC0D2C00AF51AC</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
