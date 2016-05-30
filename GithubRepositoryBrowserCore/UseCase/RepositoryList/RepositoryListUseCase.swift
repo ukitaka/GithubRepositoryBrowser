@@ -22,7 +22,7 @@ public protocol RepositoryListOutputPort {
 }
 
 public class RepositoryListUseCase: UseCase {
-    private let repos = BehaviorSubject<[Repository]>(value: [])
+    private let repos = PublishSubject<[Repository]>()
     private let disposeBag = DisposeBag()
     
     public init(inputPort: RepositoryListInputPort) {
