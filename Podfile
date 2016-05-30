@@ -9,6 +9,8 @@ target 'GithubRepositoryBrowser' do
 end
 
 target 'GithubRepositoryBrowserCore' do
+  pod 'OctoKit.swift'
+
   target 'GithubRepositoryBrowserCoreTests' do
     inherit! :search_paths
     pod 'RxBlocking', '~> 2.0'
