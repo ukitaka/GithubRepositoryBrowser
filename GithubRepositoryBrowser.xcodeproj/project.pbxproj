@@ -167,8 +167,7 @@
 		B828D46D1CFBF8BA00AF51AC /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				B828D46E1CFBF95200AF51AC /* User.swift */,
-				B828D4701CFBFE7F00AF51AC /* Repository.swift */,
+				B828D4751CFC05BF00AF51AC /* Entity */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -179,6 +178,15 @@
 				B828D4731CFC048100AF51AC /* GithubTokenConfig.swift */,
 			);
 			name = Config;
+			sourceTree = "<group>";
+		};
+		B828D4751CFC05BF00AF51AC /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B828D46E1CFBF95200AF51AC /* User.swift */,
+				B828D4701CFBFE7F00AF51AC /* Repository.swift */,
+			);
+			name = Entity;
 			sourceTree = "<group>";
 		};
 		B836F4051CFBEA20005CBC68 = {
