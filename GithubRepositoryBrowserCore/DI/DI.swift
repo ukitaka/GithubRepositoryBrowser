@@ -25,7 +25,7 @@ protocol UsesCoreComponents {
 }
 
 extension UsesCoreComponents {
-    var repository: Repositories {
+    var repositories: Repositories {
         guard let r = DIContainer.container.resolve(Repositories.self) else {
             preconditionFailure("Repositories is not registered")
         }
