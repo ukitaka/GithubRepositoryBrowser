@@ -16,21 +16,3 @@ public struct User {
     public let numberOfPublicRepos: Int
     public let numberOfPrivateRepos: Int
 }
-
-extension User {
-    init?(_ response: Octokit.User) {
-        guard let login = response.login,
-            let avatarURL = response.avatarURL.flatMap(NSURL.init),
-            let name = response.name,
-            let numberOfPrivateRepos = response.numberOfPrivateRepos,
-            let numberOfPublicRepos = response.numberOfPublicRepos else {
-                return nil
-        }
-        self.id = response.id
-        self.login = login
-        self.avatarURL = avatarURL
-        self.name = name
-        self.numberOfPublicRepos = numberOfPublicRepos
-        self.numberOfPrivateRepos = numberOfPrivateRepos
-    }
-}
