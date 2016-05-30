@@ -2,6 +2,11 @@ PODS:
   - NBNRequestKit (0.3.0)
   - OctoKit.swift (0.6.1):
     - NBNRequestKit (~> 0.3.0)
+  - Realm (0.102.1):
+    - Realm/Headers (= 0.102.1)
+  - Realm/Headers (0.102.1)
+  - RealmSwift (0.102.1):
+    - Realm (= 0.102.1)
   - RxBlocking (2.5.0):
     - RxSwift (~> 2.5)
   - RxCocoa (2.5.0):
@@ -9,22 +14,28 @@ PODS:
   - RxSwift (2.5.0)
   - RxTests (2.5.0):
     - RxSwift (~> 2.5)
+  - Swinject (1.1.1)
 
 DEPENDENCIES:
   - OctoKit.swift
+  - RealmSwift
   - RxBlocking (~> 2.0)
   - RxCocoa (~> 2.0)
   - RxSwift (~> 2.0)
   - RxTests (~> 2.0)
+  - Swinject (~> 1.1.0)
 
 SPEC CHECKSUMS:
   NBNRequestKit: 02c901b2b317c822fff4ae58dd1705f56532aee0
   OctoKit.swift: 1d5b578293ad39dfa72d3f87c525f286f7739f96
+  Realm: 5254be610db3e5024879684717bf038990bb59ec
+  RealmSwift: 3e24e6bcf56d98ccc134f4909e00839b81a659af
   RxBlocking: 595d9ab56dde6b00beaa5aba40e95b150d2135f1
   RxCocoa: e1b1562e57a554d0fb2aabf9d71b637f177257c7
   RxSwift: 402b41a50e922a0368fc14cb3bc9f4427920e8ae
   RxTests: 1b13bea0a138552b52aeead549ef08d578bcda9e
+  Swinject: 8c1b46e49c604f8c5c1f45f92ef314d3736bbef4
 
-PODFILE CHECKSUM: 1d23c404e6bdb78a105dc6884db26aba6d23dc2c
+PODFILE CHECKSUM: b8174ef37940297ba2e9aaeeebab192a1a0bca46
 
 COCOAPODS: 1.0.0
