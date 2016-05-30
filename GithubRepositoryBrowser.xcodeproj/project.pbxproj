@@ -15,6 +15,7 @@
 		B828D4601CFBEEDA00AF51AC /* GithubRepositoryBrowserCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B828D45F1CFBEEDA00AF51AC /* GithubRepositoryBrowserCoreTests.swift */; };
 		B828D4641CFBEEDA00AF51AC /* GithubRepositoryBrowserCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B828D44F1CFBEED900AF51AC /* GithubRepositoryBrowserCore.framework */; };
 		B828D4651CFBEEDA00AF51AC /* GithubRepositoryBrowserCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B828D44F1CFBEED900AF51AC /* GithubRepositoryBrowserCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B828D46F1CFBF95200AF51AC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B828D46E1CFBF95200AF51AC /* User.swift */; };
 		B836F4121CFBEA20005CBC68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B836F4111CFBEA20005CBC68 /* AppDelegate.swift */; };
 		B836F4141CFBEA20005CBC68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B836F4131CFBEA20005CBC68 /* ViewController.swift */; };
 		B836F4171CFBEA20005CBC68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B836F4151CFBEA20005CBC68 /* Main.storyboard */; };
@@ -76,6 +77,7 @@
 		B828D4581CFBEED900AF51AC /* GithubRepositoryBrowserCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubRepositoryBrowserCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B828D45F1CFBEEDA00AF51AC /* GithubRepositoryBrowserCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepositoryBrowserCoreTests.swift; sourceTree = "<group>"; };
 		B828D4611CFBEEDA00AF51AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B828D46E1CFBF95200AF51AC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B836F40E1CFBEA20005CBC68 /* GithubRepositoryBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubRepositoryBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B836F4111CFBEA20005CBC68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B836F4131CFBEA20005CBC68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		B828D4501CFBEED900AF51AC /* GithubRepositoryBrowserCore */ = {
 			isa = PBXGroup;
 			children = (
+				B828D46D1CFBF8BA00AF51AC /* Domain */,
 				B828D4511CFBEED900AF51AC /* GithubRepositoryBrowserCore.h */,
 				B828D4531CFBEED900AF51AC /* Info.plist */,
 			);
@@ -154,6 +157,14 @@
 				B828D4611CFBEEDA00AF51AC /* Info.plist */,
 			);
 			path = GithubRepositoryBrowserCoreTests;
+			sourceTree = "<group>";
+		};
+		B828D46D1CFBF8BA00AF51AC /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B828D46E1CFBF95200AF51AC /* User.swift */,
+			);
+			name = Domain;
 			sourceTree = "<group>";
 		};
 		B836F4051CFBEA20005CBC68 = {
@@ -466,6 +477,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B828D46F1CFBF95200AF51AC /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +542,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 31CAE9A83ACF47C766B5D254 /* Pods-GithubRepositoryBrowserCore.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -541,6 +554,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.waft.GithubRepositoryBrowserCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -551,6 +565,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B1EE3A79C93F7ECEF2AB8490 /* Pods-GithubRepositoryBrowserCore.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -680,6 +695,7 @@
 			baseConfigurationReference = 31920EB36C5931C6B3E2888D /* Pods-GithubRepositoryBrowser.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = GithubRepositoryBrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.waft.GithubRepositoryBrowser;
@@ -692,6 +708,7 @@
 			baseConfigurationReference = 87AA9F6D687EB39571DD1A88 /* Pods-GithubRepositoryBrowser.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = GithubRepositoryBrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.waft.GithubRepositoryBrowser;
