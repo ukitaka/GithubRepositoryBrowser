@@ -1,15 +1,15 @@
 //
-//  GithubRepositoryBrowserTests.swift
-//  GithubRepositoryBrowserTests
+//  GithubRepositoryBrowserCoreTests.swift
+//  GithubRepositoryBrowserCoreTests
 //
 //  Created by Yuki Takahashi on 2016/05/30.
 //  Copyright © 2016年 waft. All rights reserved.
 //
 
 import XCTest
-@testable import GithubRepositoryBrowser
+@testable import GithubRepositoryBrowserCore
 
-class GithubRepositoryBrowserTests: XCTestCase {
+class GithubRepositoryBrowserCoreTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
