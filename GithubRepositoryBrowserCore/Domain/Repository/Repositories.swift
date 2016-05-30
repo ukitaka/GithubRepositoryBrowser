@@ -6,7 +6,7 @@
 //  Copyright © 2016年 waft. All rights reserved.
 //
 
-import class RxSwift.Observable
+@_exported import class RxSwift.Observable
 
 protocol Repositories {
     func findByOwner(owner: String) -> Observable<[Repository]>
