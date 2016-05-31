@@ -8,7 +8,7 @@
 
 @_exported import class RxSwift.Observable
 
-protocol Repositories {
+public protocol Repositories {
     func findByOwner(owner: String) -> Observable<[Repository]>
     func findByOwner(owner: String, repository: String) -> Observable<Repository>
 }

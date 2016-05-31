@@ -13,6 +13,7 @@ import RequestKit
 
 public class GithubWebAPI {
     private let octoKit = Octokit(GithubTokenConfig)
+    public init() {}
 }
 
 extension GithubWebAPI {
@@ -32,14 +33,14 @@ extension GithubWebAPI {
 }
 
 extension GithubWebAPI: Users {
-    func findByName(name: String) -> Observable<User> {
+    public func findByName(name: String) -> Observable<User> {
         return Observable.create { [unowned self] observer in
             self.octoKit.user(name, completion: self.completion(observer, User.init))
             return AnonymousDisposable { }
         }
     }
     
-    func me() -> Observable<User> {
+    public func me() -> Observable<User> {
         return Observable.create { [unowned self] observer in
             self.octoKit.me(self.completion(observer, User.init))
             return AnonymousDisposable { }
@@ -48,7 +49,7 @@ extension GithubWebAPI: Users {
 }
 
 extension GithubWebAPI: Repositories {
-    func findByOwner(owner: String) -> Observable<[Repository]> {
+    public func findByOwner(owner: String) -> Observable<[Repository]> {
         return Observable.create { [unowned self] observer in
             self.octoKit.repositories(owner,
                 page: "1",
@@ -58,7 +59,7 @@ extension GithubWebAPI: Repositories {
         }
     }
     
-    func findByOwner(owner: String, repository: String) -> Observable<Repository> {
+    public func findByOwner(owner: String, repository: String) -> Observable<Repository> {
         return Observable.create { [unowned self] observer in
             self.octoKit.repository(owner, name: repository, completion: self.completion(observer, Repository.init))
             return AnonymousDisposable { }

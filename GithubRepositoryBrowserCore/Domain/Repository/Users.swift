@@ -8,7 +8,7 @@
 
 @_exported import class RxSwift.Observable
 
-protocol Users {
+public protocol Users {
     func findByName(name: String) -> Observable<User>
     func me() -> Observable<User>
 }
