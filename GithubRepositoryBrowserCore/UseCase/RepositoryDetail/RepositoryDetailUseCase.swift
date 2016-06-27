@@ -14,11 +14,11 @@ public struct ReloadRepositoryDetailEvent {
     let repositoryName: String
 }
 
-public protocol RepositoryDetailInputPort {
+public protocol RepositoryDetailOutputPort {
     var reloadEvent: Observable<ReloadRepositoryDetailEvent> { get }
 }
 
-public protocol RepositoryDetailOutputPort {
+public protocol RepositoryDetailInputPort {
     var repository: Observable<Repository> { get }
 }
 
@@ -26,8 +26,8 @@ public class RepositoryDetailUseCase: UseCase {
     private let repo = PublishSubject<Repository>()
     private let disposeBag = DisposeBag()
     
-    public init(inputPort: RepositoryDetailInputPort) {
-        inputPort.reloadEvent
+    public init(outputPort: RepositoryDetailOutputPort) {
+        outputPort.reloadEvent
             .flatMap { [unowned self] e in
                 self.repositories.findByOwner(e.ownerName, repository: e.repositoryName)
             }
@@ -36,7 +36,7 @@ public class RepositoryDetailUseCase: UseCase {
     }
 }
 
-extension RepositoryDetailUseCase: RepositoryDetailOutputPort {
+extension RepositoryDetailUseCase: RepositoryDetailInputPort {
     public var repository: Observable<Repository> {
         return repo.asObservable()
     }
